@@ -1,8 +1,9 @@
 
 
+
 const Home = () => {
      return (
-          <div>
+          <div className="bg-red-300">
                <h1>This is home page!</h1>
           </div>
      );
