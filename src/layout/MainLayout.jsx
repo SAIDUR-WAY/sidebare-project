@@ -1,7 +1,6 @@
 import Sidebar from "../component/Sidebar";
 import Footer from "../pages/Footer/Footer";
 import { Outlet } from "react-router-dom";
-import Home from "../pages/Home/Home";
 
 
 const MainLayout = () => {
@@ -9,9 +8,10 @@ const MainLayout = () => {
           <div>
               <div className="flex">
               
-              <Sidebar className=" absolute z-50"></Sidebar>
-              <Home className="" ></Home>
-               {/* <Outlet className="min-w-full relative min-h-full "></Outlet> */}
+              <Sidebar className="z-50"></Sidebar>
+               <div className='w-full'>
+               <Outlet></Outlet>
+               </div>
                </div>
                <Footer></Footer>
           </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { FaArrowLeft, FaRegListAlt, FaSearch } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import Navbar from './Navbar';
 const Sidebar = () => {
      const [open, setOpen] = useState(true)
      return (
@@ -10,10 +11,13 @@ const Sidebar = () => {
                     <FaRegListAlt className= {`text-2xl cursor-pointer duration-500 ${!open && 'rotate-[360deg]'}`}></FaRegListAlt>
                <h1 className={`text-3xl text-center tracking-widest uppercase ${!open && 'scale-0'} duration-300`}>SideBar</h1>   
                </div>
-               <div className= {`flex items-center rounded-md bg-gray-700 ${!open ? 'p-2.5' : 'p-2.5'} mt-2`}>
-                    <FaSearch className='text-white ml- text-lg block float-left cursor-pointer text-center  '></FaSearch>
-                    <input type='search' placeholder='Search' className='text-base bg-transparent w-full text-white focus:outline-none  hidden' />
-                    </div>      
+               <div className= {`flex items-center rounded-md bg-gray-700 ${!open ? 'p-2' : 'p-2.5'} mt-2`}>
+                    <FaSearch className= {`text-white  text-lg block float-left cursor-pointer text-center ${open && 'mr-2'} `}></FaSearch>
+                    <input type='search' placeholder='Search' className= {`text-base bg-transparent w-full text-white focus:outline-none ${!open && 'hidden'} `} />
+                    </div> 
+                    <div className="grid gap-4 my-4 ">
+                    <Navbar open={open}></Navbar>   
+                    </div> 
           </div>
      );
 };
