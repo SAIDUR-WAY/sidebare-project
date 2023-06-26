@@ -1,9 +1,10 @@
 {
+  "homepage": "https://SAIDUR-WAY.github.io/sidebare-project",
   "name": "sidebar-project",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://SAIDUR-WAY.github.io/sidebare-project",
+  
   "scripts": {
     "dev": "vite",
     "predeploy" : "npm run build",
